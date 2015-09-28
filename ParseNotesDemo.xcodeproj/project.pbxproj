@@ -15,6 +15,13 @@
 		3D86744E1BBA02B800B04A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D86744C1BBA02B800B04A97 /* LaunchScreen.storyboard */; };
 		3D8674591BBA02B800B04A97 /* ParseNotesDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8674581BBA02B800B04A97 /* ParseNotesDemoTests.swift */; };
 		3D8674641BBA02B900B04A97 /* ParseNotesDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8674631BBA02B900B04A97 /* ParseNotesDemoUITests.swift */; };
+		3D8674861BBA05CC00B04A97 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D86747F1BBA05CC00B04A97 /* Bolts.framework */; };
+		3D8674871BBA05CC00B04A97 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8674801BBA05CC00B04A97 /* Parse.framework */; };
+		3D8674881BBA05CC00B04A97 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8674811BBA05CC00B04A97 /* ParseCrashReporting.framework */; };
+		3D8674891BBA05CC00B04A97 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8674821BBA05CC00B04A97 /* ParseFacebookUtils.framework */; };
+		3D86748A1BBA05CC00B04A97 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8674831BBA05CC00B04A97 /* ParseFacebookUtilsV4.framework */; };
+		3D86748B1BBA05CC00B04A97 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8674841BBA05CC00B04A97 /* ParseTwitterUtils.framework */; };
+		3D86748C1BBA05CC00B04A97 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8674851BBA05CC00B04A97 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		3D86745F1BBA02B800B04A97 /* ParseNotesDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseNotesDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8674631BBA02B900B04A97 /* ParseNotesDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseNotesDemoUITests.swift; sourceTree = "<group>"; };
 		3D8674651BBA02B900B04A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D86747F1BBA05CC00B04A97 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "SDKs/parse-library-1.8.5/Bolts.framework"; sourceTree = "<group>"; };
+		3D8674801BBA05CC00B04A97 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "SDKs/parse-library-1.8.5/Parse.framework"; sourceTree = "<group>"; };
+		3D8674811BBA05CC00B04A97 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "SDKs/parse-library-1.8.5/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		3D8674821BBA05CC00B04A97 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "SDKs/parse-library-1.8.5/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		3D8674831BBA05CC00B04A97 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "SDKs/parse-library-1.8.5/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		3D8674841BBA05CC00B04A97 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "SDKs/parse-library-1.8.5/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		3D8674851BBA05CC00B04A97 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "SDKs/parse-library-1.8.5/ParseUI.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8674871BBA05CC00B04A97 /* Parse.framework in Frameworks */,
+				3D8674881BBA05CC00B04A97 /* ParseCrashReporting.framework in Frameworks */,
+				3D86748C1BBA05CC00B04A97 /* ParseUI.framework in Frameworks */,
+				3D8674891BBA05CC00B04A97 /* ParseFacebookUtils.framework in Frameworks */,
+				3D8674861BBA05CC00B04A97 /* Bolts.framework in Frameworks */,
+				3D86748B1BBA05CC00B04A97 /* ParseTwitterUtils.framework in Frameworks */,
+				3D86748A1BBA05CC00B04A97 /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +100,13 @@
 		3D8674341BBA02B400B04A97 = {
 			isa = PBXGroup;
 			children = (
+				3D86747F1BBA05CC00B04A97 /* Bolts.framework */,
+				3D8674801BBA05CC00B04A97 /* Parse.framework */,
+				3D8674811BBA05CC00B04A97 /* ParseCrashReporting.framework */,
+				3D8674821BBA05CC00B04A97 /* ParseFacebookUtils.framework */,
+				3D8674831BBA05CC00B04A97 /* ParseFacebookUtilsV4.framework */,
+				3D8674841BBA05CC00B04A97 /* ParseTwitterUtils.framework */,
+				3D8674851BBA05CC00B04A97 /* ParseUI.framework */,
 				3D86743F1BBA02B700B04A97 /* ParseNotesDemo */,
 				3D8674571BBA02B800B04A97 /* ParseNotesDemoTests */,
 				3D8674621BBA02B900B04A97 /* ParseNotesDemoUITests */,
@@ -400,6 +428,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDKs/parse-library-1.8.5",
+				);
 				INFOPLIST_FILE = ParseNotesDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cynthia.ParseNotesDemo;
@@ -411,6 +443,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDKs/parse-library-1.8.5",
+				);
 				INFOPLIST_FILE = ParseNotesDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cynthia.ParseNotesDemo;
