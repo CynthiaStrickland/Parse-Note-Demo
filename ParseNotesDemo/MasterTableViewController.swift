@@ -9,7 +9,9 @@
 import UIKit
 
 class MasterTableViewController: UITableViewController {
-
+  
+  @IBOutlet weak var masterTextLabel: UILabel!
+  @IBOutlet weak var masterTitleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

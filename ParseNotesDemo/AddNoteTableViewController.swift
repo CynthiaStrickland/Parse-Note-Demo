@@ -10,6 +10,11 @@ import UIKit
 
 class AddNoteTableViewController: UITableViewController {
 
+  @IBOutlet weak var titleField: UITextField!
+
+  @IBOutlet weak var textView: UITextView!
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 

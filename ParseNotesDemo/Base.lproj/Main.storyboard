@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Master Table View Controller-->
+        <!--List-->
         <scene sceneID="oxr-2k-mcq">
             <objects>
                 <tableViewController id="L9d-gh-3GM" customClass="MasterTableViewController" customModule="ParseNotesDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,18 +21,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYl-AW-b98">
-                                            <rect key="frame" x="24" y="39" width="414" height="102"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svx-wM-hef">
                                             <rect key="frame" x="24" y="8" width="414" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="414" id="Ml9-3P-yro"/>
                                                 <constraint firstAttribute="height" constant="21" id="c16-Xa-FF3"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYl-AW-b98">
+                                            <rect key="frame" x="24" y="39" width="414" height="102"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="L9d-gh-3GM" id="lOz-Gn-VLn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="MaF-N0-tzo">
+                    <navigationItem key="navigationItem" title="List" id="MaF-N0-tzo">
                         <barButtonItem key="rightBarButtonItem" title="Add Note" id="C1J-MT-Xz3">
                             <connections>
                                 <segue destination="py7-as-WjS" kind="show" identifier="addNote" id="Lca-Fd-Gq6"/>
@@ -62,6 +62,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="masterTextLabel" destination="gYl-AW-b98" id="Kf6-l8-tAC"/>
+                        <outlet property="masterTitleLabel" destination="svx-wM-hef" id="st9-Jj-ra8"/>
+                        <outlet property="tableView" destination="YCC-w9-gtg" id="dyO-Y3-xd0"/>
                         <segue destination="py7-as-WjS" kind="show" identifier="editNote" id="WwM-VJ-vfz"/>
                     </connections>
                 </tableViewController>
@@ -69,11 +72,11 @@
             </objects>
             <point key="canvasLocation" x="1115" y="362"/>
         </scene>
-        <!--Add Note Table View Controller-->
+        <!--Note-->
         <scene sceneID="XfB-Cf-1i7">
             <objects>
                 <tableViewController id="py7-as-WjS" customClass="AddNoteTableViewController" customModule="ParseNotesDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nbX-Y4-xcw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nbX-Y4-xcw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,7 +87,7 @@
                                         <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6c1-Y9-YdJ" id="FJS-fm-f2W">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w6t-68-fH4">
@@ -95,7 +98,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="w6t-68-fH4" firstAttribute="leading" secondItem="FJS-fm-f2W" secondAttribute="leadingMargin" id="AyM-e9-DYH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="w6t-68-fH4" secondAttribute="bottom" constant="-3" id="S98-Z1-j0F"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="w6t-68-fH4" secondAttribute="bottom" constant="-2" id="S98-Z1-j0F"/>
                                                 <constraint firstItem="w6t-68-fH4" firstAttribute="top" secondItem="FJS-fm-f2W" secondAttribute="topMargin" id="voP-sy-OcO"/>
                                                 <constraint firstItem="w6t-68-fH4" firstAttribute="trailing" secondItem="FJS-fm-f2W" secondAttribute="trailingMargin" id="wq0-4g-E2M"/>
                                             </constraints>
@@ -105,10 +108,10 @@
                                         <rect key="frame" x="0.0" y="108" width="600" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PQV-yL-fo6" id="Bct-wj-gPP">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LYr-97-8gx">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Start here ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LYr-97-8gx">
                                                     <rect key="frame" x="8" y="11" width="584" height="128"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -130,6 +133,13 @@
                             <outlet property="delegate" destination="py7-as-WjS" id="ubn-qT-wUL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Note" id="tgf-kM-UaD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Vpe-wd-y2E"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="LYr-97-8gx" id="MOy-9B-avC"/>
+                        <outlet property="titleField" destination="w6t-68-fH4" id="Npc-9g-mph"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQq-GB-2uc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
